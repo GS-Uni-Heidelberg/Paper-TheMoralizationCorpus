@@ -1,0 +1,276 @@
+system: "Du bist ein Experte der Linguistik für die Klassifikation von Texten. Du bekommst einen Textausschnitt und musst entscheiden, ob er eine Moralisierung nach der Definition aus dem User Prompt enthält (true) oder nicht (false). Außerdem musst du die Protagonisten in der Moralisierung extrahieren, in Klassen kategorisieren und Rollen zuordnen."
+user: |+
+    <aufgabenbeschreibung>
+    # Guidelines zur Annotation von Moralisierungen
+
+
+    Bei der Aufgabe geht es darum, Moralisierungen (oder moralisierende Sprachhandlungen, wird im Folgenden synonym verwendet) in Texten mit den für diese charakteristischen pragma -linguistischen Kategorien zu annotieren.
+
+
+    Unter moralisierenden Sprachhandlungen verstehen wir diskursstrategische Verfahren, in denen Aussagen und damit einhergehende Forderungen mit Hilfe von a uf moralische Werte verweisendes Vokabular (wie beispielsweise *Freiheit, Sicherheit* oder *helfen*, aber auch negative Wörter wie *ungerecht, verleumden*, *Krieg*) untermauert werden, mit dem Ziel, die Gültigkeit der Aussage und die Legitimität der Forderung als ebenso unhintergehbar darzustellen. **Es geht also um Argumentationen mithilfe von Moralwerten.**
+
+
+
+    **Checkliste Moralisierung:**
+    1. **Moralvokabular:** Es wird auf einen (positiven oder negativen) moralischen Wert verwiesen. Dies kann mithilfe verschiedener Wortarten geschehen (Nomen: *Freiheit*; Verb: *helfen*, Adjektiv: *solidarisch*). Die Moralvokabeln können dabei entweder ganz direkt auf (positive oder negative) moralische Werte verweisen (*Solidarität*, *Ungerechtigkeit*) oder auf Zustände, die aus moralischen Gründen abzulehnen oder zu begrüßen sind (*Kinderarmut*, *Krieg*, *Spenden*).
+    2. Es gibt einer **Forderung** (bzw. ein Argument), die allerdings auch implizit bleiben kann (was häufig der Fall ist). Beispiele: - *Wir brauchen in öffentlichen Gebäuden mehr Überwachungskameras, um für die Sicherheit unserer Mitarbeiter zu garantieren.* Hier ist die (explizite) Forderung, *mehr Überwachungskameras zu installieren. - Frauen verdienen immer noch weniger als Männer, obwohl im Artikel 3 des Grundgesetzes verfassungsmäßig die Gleichstellung von Mann und Frau verankert ist.* Hier ist die implizite Forderung, dass Frauen genauso viel verdienen sollen wie Männer.
+    3. **Die Moralvokabel trägt zur Unterstützung der Forderung bei:** Weil der moralische Wert unumstritten ist (Gerechtigkeit ist gut, Kinderarmut ist schlecht), erscheint auch die damit verknüpfte Forderung gerechtfertigt bzw. unhintergehbar. Da wir rein deskriptiv das Sprachhandlungsmuster der Moralisierung untersuchen, wird hier nicht unterschieden zwischen angemessenen und unangemessenen Moralisierungen. - *Wir brauchen strengere Gesetze, um rassistisch motivierte Gewalt zu verhindern.* Rassistisch motivierte Gewalt ist schlecht, daher ist die Forderung nach strengeren Gesetzen legitim, wenn diese die Gewalt eindämmen. - *Wir sollten eine Obergrenze für Flüchtlinge einführen, um unseren Bürgern ein sicheres Deutschland zu gewährleisten.* Sicherheit ist gut, daher ist die Forderung nach einer Obergrenze für Flüchtlinge legitim, wenn auf diese Weise für mehr Sicherheit gesorgt wird.
+
+
+    ANNOTATIONSKATEGORIEN
+
+    ## Kategorie 1: Moralische Werte
+
+
+    **Annotationssegmente**
+
+
+
+    Hier werden Wörter und Phrasen, die direkt oder indirekt auf moralische Werte verweisen, in dem Text annotiert. Direkte Verweise sind bspw. *Sicherheit, Frieden, Ungerechtigkeit* etc.; indirekte Verweise z.B. *Angriff, Kinderarmut, Demokratie.* 
+
+
+
+    Moralische Werte können durch Nomen, Verben, Adjektive oder Adverbien ausgedrückt werden. Nomen werden dabei immer auf der Phrasenebene annotiert (also z.B. *die europäische Solidarität* u nd nicht nur *die europäische Solidarität*). Beispiele, in denen einzelne Wörter den moralischen Wert/subjektiven Ausdruck umfassen, sind Beispiel a, b, d, e oder f. Beispiele für Phrasen, die mehrere Wörter umfassen, sind Beispiel c (Verbalphrase), g, i, j und k (Nominalphrase).
+
+
+
+    Es werden *alle* moralischen Werte im Text annotiert, die **relevant und zentral** für die moralisierende Sprachhandlung sind. Moralische Werte und subjektive Ausdrücke, die *nicht* im Zusammenhang mit der Moralisierung stehen (also nicht diskursstrategisch eingesetzt werden), werden nicht annotiert.
+
+
+
+    - Beispiel: *Die innerlich dezimierte Industrie mit ihrer vernachlässigten industriellen Ausrüstung, den JEIA-Beschränkungen, den geheimen und offenen Diskriminierungen kann eine Konkurrenzfähigkeit auch nicht auf Kosten einer weiter verstärkten Ausbeutung des werktätigen Volkes erreichen*. hier wird z.B. nicht *dezimierte* oder *vernachlässigte* annotiert, da diese Wörter keine zentrale Rolle bei der Moralisierung spielen. Wichtig sind hingegen *Diskriminierungen* und *Ausbeutung*.
+
+    - Ebenso werden beispielsweise in folgendem Beispiel nur die unterstrichenen Wörter als Moralwerte annotiert: *Die Defizithypothese erweist sich als die zur wissenschaftlichen Pseudoobjektivität erhobene Arroganz derjenigen, die nun einmal die kulturellen Muster der legitimen Statuszuweisungsmechanismen definieren und die erfolgreich die Beherrschung der ihnen eigenen Symbole als die einzig mögliche Form intelligenten Verhaltens erscheinen lassen.*
+
+
+
+    Enthält ein Satz **mehr als einen moralischen Wert**, d er zentral für die moralisierende Sprachhandlung sind, sind diese separat zu markieren und zu annotieren (z.B. *unsere Ideale von Menschenrecht und Nächstenliebe*).
+
+
+
+    Falls mehrere Labels auf ein Wort bzw. eine Phrase zutreffen, können auch mehrere Labels (z.B. Cheating und Betrayal vergeben werden (bitte exakt den gleichen Textspan in Inception markieren!).
+
+
+
+    Bei **Negationen** wird der negierte moralische Wert annotiert, z.B. *nicht gerecht* Cheating, oder *gewaltfrei* Care
+
+
+ 
+
+
+
+
+
+    **Annotationskategorien**
+
+
+
+    Die markierten Wörter bzw. Phrasen werden anschließend einer der Kategorien aus der *Moral Foundations Theory* (MFT; Haidt und Joseph, 2004; Graham et al., 2013) [^1] zugeordnet, die moralische Werte entlang von sechs Dimensionspaaren bestehend aus positiven und negativen Werten klassifiziert.
+
+
+
+    Bei der Zuordnung soll der Fokus immer auf der mit der moralisierenden Sprachhandlung zusammenhängenden Forderung liegen: Welcher moralische Wert wird verwendet, um die Forderung durchzusetzen / zu unterstützen?
+
+
+
+    Vorab ist anzumerken, dass die englischen Namen der Labels der MFT in manchen Fällen nicht hundertprozentig zutreffend erscheinen, z.B. *Cheating*, was für *Unfairness, Ungerechtigkeit, Benachteiligung* (und nicht (nur) für die wörtliche Übersetzung *betrügen*) steht. Deshalb wurden im Folgenden passende deutsche Übersetzungen der Labels hinzugefügt, an denen Sie sich beim Annotieren orientieren können.
+
+
+
+    |**Moralischer Wert (MFT)**| **Beispiele**                                                                                                                         |
+    |:---|:--------------------------------------------------------------------------------------------------------------------------------------|
+    |**Care** (Fürsorge, Zuwendung) | a). *Kinder brauchen Vertrauen und Liebe und keine Pershing II und keine SS 20.*                                              |
+    |**Harm** (Schaden, Verletzung) | b). *Rassismus ist Unmenschlichkeit.*                                                                                               |
+    |**Fairness** (Fairness, Gerechtigkeit, Gleichbehandlung) | c). *Wir müssen uns gegenüber unseren Mitbürgern gerecht verhalten .*                                                             |
+    |**Cheating** (Unfairness, Ungerechtigkeit, Benachteiligung) | d). *Sie haben die Menschen getäuscht und belogen , meine Damen und Herren von der Regierung!*                                |
+    |**Loyalty** (Loyalität) | e). *In diesen Zeiten müssen wir zusammenhalten.*                                                                                   |
+    |**Betrayal** (Abtrünnigkeit, Illoyalität, Treuebruch) | f). *Herr Veith, für mich persönlich verraten Sie die Interessen der Reservisten.*                                                |
+    |**Authority** (Autorität, Handlungshoheit) | g). *Auch Impfgegner müssen die Autorität des Staates anerkennen.*                                                                |
+    |**Subversion** (Rebellion gegen Autoritäten) | h). *Auf diese Weise verstoßen Sie und Ihre Kollegen gegen geltende Gesetze.*                                                       |
+    |**Purity** (Reinheit) | i). *Eine gesunde Ernährung ist wichtig für heranwachsende Kinder.*                                                                 |
+    |**Degradation** (Beschmutzung) | j). *Ihre Promiskuität hat sie zu Fall gebracht.*                                                                                     |
+    |**Liberty** (Freiheit) | k). *Je mehr Gesetze die Regierung gibt, umso mehr gerät sie in Versuchung, die persönliche und sittliche Freiheit zu gefährden.* |
+    |**Oppression** (Unterdrückung, Einschränkung) | l). *Die neuen Gesetzesentwürfe beschneiden die Menschenrechte Geflüchteter.*                                                     |
+
+
+
+    **III Erläuterungen zu den Dimensionspaaren**
+
+
+
+    - **Care** (andere schützen, sich um andere kümmern, anderen Gutes tun) vs. **Harm** (anderen schaden oder andere verletzen (körperlich, seelisch, psychisch etc.))
+
+    - **Fairness** (Gerechtigkeit, Autonomie, Gleichheit, Verhältnismäßigkeit) vs. **Cheating** (Betrug, Unfairness, Ungerechtigkeit, mangelnde Zusammenarbeit, Missachtung der Rechte/Autonomie anderer, Ungleichheit, Nichtverhältnismäßigkeit)
+
+    - **Loyalty** (Loyalität zur eigenen Gruppe, Gruppenzugehörigkeit und Solidarität, Selbstaufopferung für die Gruppe, Patriotismus) vs. **Betrayal** (Verrat an der eigenen Gruppe)
+
+    - **Authority** (den Regeln einer Gesellschaft oder Hierarchie folgen, Erfüllen sozialer Rollen, Unterordnung unter Autoritäten und Führungscharakteren, Respekt vor sozialer Hierarchie/Tradition/Führung) vs. **Subversion** (Infragestellung von Hierarchien, Rebellion gegen Autoritäten)
+
+    - **Purity** (Streben nach einem "edlen", "reinen", weniger "fleischlichem" Leben und Lebensstil, z.B. Umweltschutz, Monogamie, gesunde Ernährung oder sexuelle Enthaltsamkeit) vs. **Degradation** (Verunreinigung bzw. Entweihung unseres Körpers oder unserer Umwelt durch unmoralische Aktivitäten, z.B. Alkoholmissbrauch, Promiskuität, Umweltverschmutzung oder Völlerei). *Anmerkung: Dieses Dimensionspaar ist häufig mit religiösen Traditionen verbunden, dies muss aber nicht immer der Fall sein.*
+
+    - **Liberty** (die Freiheit, etwas zu tun; Selbstbestimmtheit) vs. **Oppression** (jemanden einschränken)
+
+
+
+    **Anmerkung:** Die Kategorien **Fairness/Cheating** und **Loyalty / Betrayal** liegen oft sehr nah beieinander. Der wichtigste Unterschied ist, dass es bei Loyalty / Betrayal immer um ein Verhalten in Bezug auf die eigene Gruppe geht, während bei Fairness/Cheating um eine universellere Art der fairen Behandlung aller Menschen geht, unabhängig von deren Gruppenzugehörigkeit.
+
+
+
+    ## Kategorie 2: Forderung/Handlungskonsequenz
+
+
+
+    Ein wesentliches Merkmal moralisierender Sprachhandlungen ist deren Forderungscharakter/die damit verbundene Forderung. Diese kann allerdings auch implizit bleiben. 
+
+
+
+    - Bei expliziten Forderungen soll das Textsegment markiert und extrahiert werden, das die Forderung zum Ausdruck bringt. Die Forderung muss dabei nicht immer im imperativischen Modus formuliert sein, um als explizit gewertet zu werden. Liegen mehrere Forderungen im Text vor, werden diese separat annotiert.
+
+
+
+    Beispiel: *Liebe Kolleginnen und Kollegen, wer Kultur und Medien stärkt, stärkt die Freiheit.* Hier ist die Forderung, dass Kultur und Medien gestärkt werden sollen. Es reicht hier völlig, die zentralen Wörter *Kultur und Medien stärkt* zu markieren (keine Implizitheit)
+
+
+
+    - Implizite Forderungen sollen in einem (oder mehreren) möglichst **einfachen, kurzen Satz/Sätzen ausformuliert** werden. Wenn möglich soll hierfür die imperativische Formulierung gewählt werden (Bsp. D). Lässt sich dies nicht umsetzen, ist eine soll-Konstruktion zu wählen (Bsp. E).
+
+
+
+
+
+    |**Beispiele**|**Kategorisierung der Forderung** |
+    |:---|:---|
+    |A). *Liebe Kolleginnen und Kollegen, wer Kultur und Medien stärkt , stärkt die Freiheit.* |**Explizit**|
+    |B). *Ich verlange daher von den Journalisten, die Privatsphäre unserer Gefangenen zu akzeptieren !* |**Explizit**|
+    |C). *In diesen Zeiten müssen wir zusammenhalten.* |**Explizit**|
+    |D). *Herr Veith, für mich persönlich verraten Sie die Interessen der Reservisten.*|**Implizit;** Ausformulierung: *Verhalten Sie sich loyal gegenüber den Reservisten !* |
+    |E). *Frauen verdienen immer noch weniger als Männer, obwohl im Artikel 3 des Grundgesetzes verfassungsmäßig die Gleichstellung von Mann und Frau verankert ist.*|**Implizit;** Ausformulierung: *Frauen sollen genauso viel verdienen wie Männer.* |
+
+
+
+
+    **Weitere Hinweise**
+
+
+
+    - Es kann auch vorkommen, dass sich in einem Text sowohl explizite als auch implizite Forderungen befinden.
+
+    - In vielen Fällen beruhen implizite Forderungen auf einem als negativ beschriebenen Ist-Zustand – die Forderung ist dann in der Regel, diesen Zustand zu ändern (z.B. *Die Langzeitarbeitslosigkeit ist schon seit geraumer Zeit ein wesentliches Problem in Deutschland.*)
+
+    ## Kategorie 3: Protagonist:innen
+
+    **Annotationssegmente**
+
+    Diese Kategorie dient dazu, die für die Moralisierungshandlung relevanten Protagonist:innen anhand von zwei Unterkategorien näher zu charakterisieren. Beispiele finden sich am Ende des Abschnitts. Die Protagonist:inn:en werden dabei immer als Nominalphrasen markiert, sie können aus einzelnen Wörtern (siehe Beispiel a) oder mehreren Wörtern (siehe Beispiel c) bestehen. 
+
+    Generell gilt: Es sollen alle Protagonist:innen im Text annotiert werden, die für die Moralisierung wichtig sind. In folgendem Beispiel sind "die Eltern" relevante Protagonist:innen für die Sprachhandlung des Moralisierens, die Kinder ("Schützlinge") selbst spielen jedoch bei genauerer Betrachtung keine wichtige Rolle bei der Moralisierung, weil es um die finanziellen Ausgaben der Eltern geht. Deshalb werden die Kinder hier nicht als Protagonistinnen annotiert:
+
+    In Niedersachsen, wo ich zur Schule gegangen bin, gab es noch nie eine Lehrmittelfreiheit. Hier sind die Eltern jedes Schuljahr für sämtliche Lehrmittelkosten Ihrer Schützlinge persönlich aufgekommen. Warum sollten die Eltern in Hamburg gegenüber Familien in Niedersachsen sozial bevorteilt werden? Zu begrüßen wäre doch eine bundesweite Vereinheitlichung und somit zumindest ansatzweise eine soziale Gerechtigkeit in diesem Punkt.
+
+    Annotiert werden Protagonist:inn:en, auf die durch Nomen, Pronomen oder Eigennamen referiert wird. Andere Referenzen, z.B. durch Adjektive (die deutschen Interessen; Sie ist seit zwei Jahren arbeitslos) werden nicht annotiert. In Null-Subjektsprachen (Pro-Drop-Sprachen) wie dem Italienischen wird anstelle eines Pronomens das konjugierte Verb mit der entsprechenden Endung markiert.
+
+    Oft werden mehrere Protagonist:innen in einem Text genannt. In diesem Fall werden diese separat annotiert.
+
+    In seltenen Fällen kann es vorkommen, dass keine Protagonist:inn:en genannt werden (z.B. bei folgendem Satz: Rassismus ist Unmenschlichkeit.)
+
+    Verweist in einem Text ein Pronomen und eine Nominalphrase/ein Nomen/ein Eigenname auf die gleiche Entität mit der gleichen Rolle und Gruppenzugehörigkeit, wird das Pronomen nicht annotiert, sondern nur die Nominalphrase/das Nomen/der Eigenname (Bsp. A und B). Gleiches gilt, wenn innerhalb eines Textes mit gleichen oder unterschiedlichen Wörtern auf die gleiche Entität mit der gleichen Rolle und Gruppenzugehörigkeit verwiesen wird. In diesen Fällen wird immer nur das zuerst genannte Nomen/Eigennamen annotiert (Bsp. C). In einigen Sonderfällen kann sich das gleiche Personalpronomen auf unterschiedliche Entitäten beziehen, dann werden diese separat annotiert (Bsp. D).
+
+    -	Bsp. A) Sie haben die Menschen getäuscht und belogen, meine Damen und Herren von der Regierung! --> Hier wird die Anrede "Sie" nicht annotiert
+    -	Bsp. B)  Je mehr Gesetze die Regierung gibt, umso mehr gerät sie in Versuchung, die persönliche und sittliche Freiheit zu gefährden. --> Hier wird das Pronomen "sie" nicht annotiert
+    -	Bsp. C) Wir müssen unsere Kinder vor solchen Übergriffen schützen, denn Kinder brauchen ein sicheres Umfeld. --> Hier wird nur die erste Nennung ("unsere Kinder") annotiert
+    -	Bsp. D) Wir wollen die europäische Integration, weil wir von ihr leben. --> Hier bezieht sich das erste "wir" auf eine institutionelle Gruppe, die als Forderer auftritt, und das zweite "wir" auf die Menschen im generischen Sinne, die von der Forderung profitieren.
+
+    **Annotationskategorien**
+
+    Für die Protagonist:innen werden immer die beiden folgenden Unterkategorien annotiert:
+
+    **KAT3-GRUPPE (Welche Personen/Gruppen sind gemeint?)**
+
+    Mit dieser Unterkategorie wird charakterisiert, welche Person bzw. Personengruppe gemeint ist. Dabei wird unterschieden zwischen
+    | Kategorie                                                        | Annotations-kürzel | Beispiele                                                                                                   |
+    |------------------------------------------------------------------|--------------------|------------------------------------------------------------------------------------------------------------|
+    | Bestimmte Personen                                                | Individuum         | Herr X, Immanuel Kant                                                                                      |
+    | Menschen/Bürgern im Allgemeinen                                  | Menschen           | die Bevölkerung, die Menschen, das Volk                                                                    |
+    | Institutionen/Organisationen/Parteien/Koalitionen/Ländern etc.   | Institution        | Unser demokratischer Staat, SPD, WHO, Deutschland (Nur wenn dieses als Protagonist und nicht als Ort gemeint ist) |
+    | Sozial definierbare Personengruppen (Berufsgruppen, Studierende, Frauen, Eltern etc.) | Soziale Gruppe     | die Kinder, die arbeitende Bevölkerung, Eltern                                                              |
+
+    **KAT3-ROLLE (In welchem Bezug steht die genannte Person/Personengruppe zu der Forderung?)**
+
+    Mit jeder Moralisierung ist eine explizite oder implizite Forderung verknüpft. Hier ist - unabhängig davon, ob die Forderung explizit oder implizit ist - für jede:n Protagonist:in zu annotieren, ob diese:r 
+
+    -	die/der Forderer:in selbst ist, also die moralisierende Instanz (Annotationskürzel: Forderer:in)
+    -	der/die Adressat:in dieser Forderung ist (also die Person, von der etwas gefordert wird (indirekt oder direkt – also auch, wenn sie nicht direkt angesprochen wird)  (Annotationskürzel: Adressat:in) 
+    -	der/die Nutznießer:in der Forderung ist – also der/diejenige, dem/der die Forderung zugute kommt/kommen soll bzw. die Umsetzung der Forderung zugute kommen würde bzw. der/diejenige, die derzeit unter den Handlungen des Adressaten leidet (Annotationskürzel: Benefizient:in) 
+    -	von der Forderung negativ betroffen ist – also der/diejenige, dem/der die Forderung schadet bzw. zum Nachteil gereicht (Annotationskürzel: Malefizient:in) 
+    -	in einem Bezug zur Forderung steht, der Bezug aber unklar ist (Annotationskürzel: Bezug unklar)
+    -	in keinem Bezug zur Forderung steht (Annotationskürzel: NONE)
+
+    **Mehrfachannotationen.** 
+
+    In einigen Fällen kann ein:e Protagonist:in auch mehrere Rollen haben,  (siehe Beispiel c, oder den Satz Wir wollen die europäische Integration, weil wir von ihr leben, in dem wir gleichzeitig Benefizient, Adressat, und Forderer ist) – in diesem Fall können mehrere Label vergeben werden (bitte exakt den gleichen Textspan in Inception markieren!).
+    Ein inkludierendes wir oder uns (z.B. Wir müssen, sollten x tun….) bezieht sich in der Regel zugleich auf Adressat und Forderer. Solche Mehrfachannotationen gibt es nur in KAT3-ROLLE (nicht aber in KAT3-GRUPPE).
+
+    **Beispiele**
+
+    a)	Kinder brauchen Vertrauen und Liebe und keine Pershing II und keine SS 20.
+        
+        KINDER: Soziale Gruppe, Benefizient
+
+    b)	Wir müssen uns gegenüber unseren Mitbürgern gerecht verhalten.
+        
+        WIR: Menschen, Forderer, Adressat
+        
+        UNSERE MITBÜRGERN: Menschen, Benefizient
+
+    c)	Sie haben die Menschen getäuscht und belogen, meine Damen und Herren von der Regierung!
+        
+        DIE MENSCHEN: Menschen, Benefizient
+        
+        MEINE D&H VON DER REGIERUNG: Institution, Adressat
+
+    d)	Um den Grundsatz der Gleichberechtigung zu wahren, muss die Regierung Spitzenverdiener höher besteuern.
+        
+        SPITZENVERDIENER: Soziale Gruppe, Malefizient
+        
+        DIE REGIERUNG: Institution, Adressat
+
+
+    [^1]: <sup>1</sup> [https://moralfoundations.org/](https://moralfoundations.org/)
+
+    </aufgabenbeschreibung>
+
+    <fragen>
+    i) Leite her, ob gemäß den obigen Kriterien in der <teil_a> eine Moralisierung im folgenden <text> vorliegt oder nicht. 
+    ii) Entscheide daraufhin, ob eine Moralisierung vorliegt oder nicht. Antworte true oder false.
+    iii) - Extrahiere gemäß <teil_b> die Protagonisten.  
+         - Kategorisiere sie nach <teil_c>.  
+         - Weise ihnen Rollen nach <teil_d> zu.  
+    </fragen>
+
+    <output_format>
+    {{
+        "moralisierung": {{
+            "moral_werte": [
+                {{
+                    "text": "string",
+                    "moral_foundations_theory_kategorien": ["Fürsorge", "Schaden", "Fairness", "Betrug", "Loyalität", "Verrat", "Autorität", "Untergrabung von Autorität", "Reinheit", "Verfall", "Freiheit", "Unterdrückung"]
+                }},
+                ...
+            ],
+            "forderung": "string",
+            "enthaelt_moralisierung": "boolean"
+        }},
+        "protagonisten": [
+            {{
+                "text": "string",
+                "kategorie": ("Individuum" | "Menschen" | "Institution" | "Soziale Gruppe" | "OTHER"),
+                "rollen": ["Forderer:in", "Adressat:in", "Benefizient:in", "Malefizient:in", "Bezug unklar", "NONE"]
+            }},
+            ...
+        ]
+    }}
+    </output_format>
+
+    <text>
+    {text}
+    </text>

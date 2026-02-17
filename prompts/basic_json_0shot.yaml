@@ -1,0 +1,38 @@
+system: "Du bist ein Experte der Linguistik für die Klassifikation von Texten. Du bekommst einen Textausschnitt und musst entscheiden, ob er eine Moralisierung enthält (true) oder nicht (false). Außerdem musst du die Protagonisten in der Moralisierung extrahieren, in Klassen kategorisieren und Rollen zuordnen."
+user: |+
+    <fragen>
+    i) Bestimme die moralischen Werte mit der entsprechenden Moral Foundations Theory (MFT) Kategorie (Fürsorge, Schaden, Fairness, Betrug, Loyalität, Verrat, Autorität, Untergrabung von Autorität, Reinheit, Verfall, Freiheit, Unterdrückung) im <text>. 
+    ii) Bestimme die Forderung im <text>.
+    ii) Bestimme ob im <text> eine Moraliserung vorliegt. Antworte true oder false.
+    iii) - Extrahiere alle Nominalphrasen im <text>, die sich auf Protagonisten beziehen.  
+         - Weise jedem Protagonisten genau eine Kategorie zu (Individuum, Menschen, Institution, Soziale Gruppe, OTHER).
+         - Falls eine Moralisierung vorliegt, weise jedem Protagonisten eine oder mehrere Rolle zu (Forderer:in, Adressat:in, Benefizient:in, Malefizient:in, Bezug unklar, NONE).
+    </fragen>
+
+    <output_format>
+    {{
+        "moralisierung": {{
+            "moral_werte": [
+                {{
+                    "text": "string",
+                    "moral_foundations_theory_kategorien": ["Fürsorge", "Schaden", "Fairness", "Betrug", "Loyalität", "Verrat", "Autorität", "Untergrabung von Autorität", "Reinheit", "Verfall", "Freiheit", "Unterdrückung"]
+                }},
+                ...
+            ],
+            "forderung": "string",
+            "enthaelt_moralisierung": "boolean"
+        }},
+        "protagonisten": [
+            {{
+                "text": "string",
+                "kategorie": ("Individuum" | "Menschen" | "Institution" | "Soziale Gruppe" | "OTHER"),
+                "rollen": ["Forderer:in", "Adressat:in", "Benefizient:in", "Malefizient:in", "Bezug unklar", "NONE"]
+            }},
+            ...
+        ]
+    }}
+    </output_format>
+
+    <text>
+    {text}
+    </text>

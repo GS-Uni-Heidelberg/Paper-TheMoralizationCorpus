@@ -1,0 +1,273 @@
+system: "Du bist ein Experte der Linguistik für die Klassifikation von Texten. Du bekommst einen Textausschnitt und musst entscheiden, ob er eine Moralisierung nach der Definition aus dem User Prompt enthält (true) oder nicht (false). Außerdem musst du die Protagonisten in der Moralisierung extrahieren, in Klassen kategorisieren und Rollen zuordnen."
+user: |+
+    <aufgabenbeschreibung>
+
+    <teil_a>
+    TEIL A: Bestimme, ob eine Moralisierung vorliegt.
+
+    Eine Moralisierung muss drei Kriterien gleichzeitig erfüllen:
+    1. Der Text muss Hinweise auf einen oder mehrere moralische Werte enthalten.
+        - Moralische Werte können positiv sein (und sollten angestrebt werden, wie beispielsweise "Frieden", "sicher", "unterstützen") oder negativ (und sollten vermieden oder bekämpft werden, wie beispielsweise "Ungerechtigkeit", "unfair", oder "beleidigen").
+        - Moralische Werte können durch einzelne Wörter (Nomen wie beispielsweise "Sicherheit" oder "Krieg", Adjektive wie beispielsweise "gerecht" oder "unfair", oder Verben wie beispielsweise "absichern" oder "betrügen") oder Phrasen (wie beispielsweise "der grausame Krieg" oder "der hinterlistige Plan") ausgedrückt werden.
+        - Moralische Werte wurden im Rahmen der Moral Foundations Theory (MFT) untersucht und können in folgende Kategorien eingeteilt werden: Fürsorge, Schaden, Fairness, Betrug, Loyalität, Verrat, Autorität, Untergrabung von Autorität, Reinheit, Verfall, Freiheit, Unterdrückung.
+    2. Der Text muss eine Forderung enthalten, etwas zu tun, etwas zu unterlassen, oder eine bestimmte Haltung einzunehmen.
+        - Die Forderung kann explizit (z.B. "Frauen sollen so viel verdienen wie Männer") oder implizit ("Frauen verdienen trotz gleichem gesetzlichen Status immer noch weniger als Männer") sein.
+        - Implizite Forderungen kommen vor und zählen als Forderungen.
+            - Achtung: Implizite Forderungen sollten zweifelsfrei aus dem Kontext rekonstruierbar sein. Es sollte hierbei nicht spekuliert werden. Wenn du dir unsicher bist, antworte mit False.
+    3. Verknüpfung von Forderung und moralischem Wert: Der moralische Wert aus Kriterium 2 wird eingesetzt, um die Forderung aus Kriterium 1 argumentativ zu unterstützen/ zu bekräftigen.
+        - Das argumentative Muster: Weil etwas gut oder schlecht ist (moralischer Wert), sollte man es tun/unterstützen oder unterlassen/vermeiden (Forderung).
+        - Oft liegt nur ein moralischer Wert vor, aber keine Forderung, in diesem Fall handelt es sich um keine Moralisierung.
+        - Kommt eine Forderung und ein moralischer Wert vor, die nicht in einer argumentativen Relation zueinander stehen, handelt es sich um keine Moralisierung.
+
+    Wenn alle drei Kriterien erfüllt sind, liegt eine Moralisierung vor.
+
+    Es liegt keine Moralisierung vor, wenn:
+    1. Der Text keine moralischen Werte und keine Forderung enthält; oder
+    2. Der Text einen oder mehrere moralische Werte, aber keine Forderung enthält; oder
+    3. Der Text eine Forderung, aber keine moralischen Werte enthält; oder
+    4. Der Text eine Forderung und einen oder mehrere moralische Werte enthält, die moralischen Werte die Forderung aber nicht argumentativ unterstützen oder bekräftigen (wenn die moralischen Werte also nicht mit der Forderung verknüpft sind).
+
+    </teil_a>
+
+    <teil_b>
+    TEIL B: Extrahiere Protagonisten.
+
+    Extrahiere alle Nominalphrasen, die sich auf Protagonisten beziehen. Dazu zählen:
+        - Individuen (z.B. "Angela Merkel")
+        - Menschengruppen (z.B. "die Kinder")
+        - Institutionen, Organisationen, Parteien, Koalitionen, Länder (z.B. "WHO", "SPD", "Deutschland")
+        - Sozial definierbare Personengruppen (z.B. "die Arbeitslosen", "Studierende")
+        - Generische Verweise (z.B. "das Volk", "die Bürger")
+
+    Sonderregeln:
+    - Andere Referenzen werden nicht annotiert (z.B. durch Adjektive; die "deutschen" Interessen).
+    - Oft werden mehrere Protagonist:innen in einem Text genannt. In diesem Fall werden diese separat annotiert. 
+    - In seltenen Fällen kann es vorkommen, dass keine Protagonisten genannt werden.
+    - Verweist ein Pronomen und eine Nominalphrase/ein Nomen/ein Eigenname auf die gleiche Entität mit der gleichen Rolle und Gruppenzugehörigkeit, wird das Pronomen nicht annotiert, sondern nur die Nominalphrase/das Nomen/der Eigenname (z.B. “Sie haben die Menschen getäuscht und belogen, meine Damen und Herren von der Regierung!” Hier wird die Anrede “Sie” nicht annotiert, da die Entität mit der Phrase “meine Damen und Herren von der Regierung” bereits erfasst ist).
+    - Wenn innerhalb eines Textausschnitts mit gleichen oder unterschiedlichen Wörtern auf die gleiche Entität mit der gleichen Rolle und Gruppenzugehörigkeit verwiesen wird, wird immer nur die zuerst genannte Nominalphrase/das Nomen/der Eigenname annotiert (z.B. "Wir müssen unsere Kinder vor solchen Übergriffen schützen, denn Kinder brauchen ein sicheres Umfeld." Hier wird nur die erste Nennung ("unsere Kinder") annotiert).
+    - In einigen Sonderfällen kann sich das gleiche Personalpronomen auf unterschiedliche Entitäten beziehen, dann werden diese separat annotiert (z.B. "Wir wollen die europäische Integration, weil wir von ihr leben." Hier bezieht sich das erste "wir" auf eine institutionelle Gruppe, die als Forderer auftritt, und das zweite "wir" auf die Menschen im generischen Sinne, die von der Forderung profitieren.).
+    </teil_b>
+
+    <teil_c>
+    TEIL C: Kategorisiere Protagonisten.
+
+    Weise jedem Protagonisten genau eine Kategorie zu:
+    - **Individuum** (Bestimmte Personen, z.B. "Herr Müller", "Angela Merkel")
+    - **Menschen** (Bürger allgemein, z.B. "Menschen", "die Bevölkerung", "die Menschen", "das Volk", "die Berliner", "die Anwohner")
+    - **Institution** (Institutionen/Organisationen/Parteien/ Koalitionen/Ländern etc., z.B. "Unser demokratischer Staat", "SPD", "WHO", "Deutschland" (Nur wenn dieses als Protagonist und nicht als Ort gemeint ist))
+    - **Soziale Gruppe** (Sozial definierbare Personengruppen, z.B. "die Arbeitslosen", "Studierende", "Frauen", "Eltern", "die arbeitende Bevölkerung")
+    - **OTHER** (Wenn keine andere Kategorie zutrifft)
+    </teil_c>
+
+    <teil_d>
+    TEIL D: Weise Protagonisten Rollen in der Moralisierung zu.
+
+    Falls eine Moralisierung vorliegt, weise jedem Protagonisten eine Rolle zu:
+    - **Forderer:in** (Person/Personengruppe, die die Forderung vorbringt)
+    - **Adressat:in** (Person/Personengruppe, an die sich die Forderung richtet)
+    - **Benefizient:in** (Person/Personengruppe, die die Nutznießer:in der Forderung ist – also der/diejenige, dem/der die Forderung zugute kommt/kommen soll bzw. die Umsetzung der Forderung zugute kommen würde bzw. der/diejenige, die derzeit unter den Handlungen des Adressaten leidet)
+    - **Malefizient:in** (Person/Personengruppe, die von der Forderung negativ betroffen ist – also der/diejenige, dem/der die Forderung schadet bzw. zum Nachteil gereicht)
+    - **Bezug unklar** (Wenn du dir sicher bist, dass die Person/Personengruppe eine wichtige Rolle bei der Moralisierung spielt, aber du dir unsicher bist, welche Rolle genau)
+    - **NONE** (Protagonisten, die in keinem Zusammenhang mit der Moralisierung stehen)
+
+    Besonderheiten:
+    - Mehrfachrollen sind möglich (z.B. "Wir wollen die europäische Integration, weil wir von ihr leben." Hier ist das Pronomen wir gleichzeitig Benefizient, Adressat, und Forderer).
+    - Ein inkludierendes "wir/uns" (z.B. "Wir" müssen, sollten x tun...) bezieht sich in der Regel auf **Adressat:in + Forderer:in**.
+    </teil_d>
+
+    </aufgabenbeschreibung>
+
+    <beispiele>
+        - "Wir sollten die Steuern erhöhen."
+            {{
+                "moralisierung": {{
+                    "moral_werte": [],
+                    "forderung": "Wir sollten die Steuern erhöhen.",
+                    "begruendung": "Es wird nur eine Handlung empfohlen, ohne dass ein moralischer Wert als Begründung genannt wird.",
+                    "enthaelt_moralisierung": false
+                }},
+                "protagonisten": [
+                    {{"text": "Wir", "kategorie": "Institution", "rollen": ["NONE"]}}
+                ]
+            }}
+        - "Wir sollten die Steuern erhöhen, um die Armut zu bekämpfen und Gerechtigkeit zu schaffen."
+            {{
+                "moralisierung": {{
+                    "moral_werte": [
+                        {{"text": "Gerechtigkeit", "moral_foundations_theory_kategorien": ["Fairness", "Fürsorge"]}},
+                        {{"text": "die Armut zu bekämpfen", "moral_foundations_theory_kategorien": ["Fairness", "Fürsorge"]}}
+                    ],
+                    "forderung": "Wir sollten Steuern erhöhen.",
+                    "begruendung": "Die Forderung, die Steuern zu erhöhen, wird durch die moralischen Werte „Gerechtigkeit“ und „Armut bekämpfen“ unterstützt.",
+                    "enthaelt_moralisierung": true
+                }},
+                "protagonisten": [
+                    {{"text": "Wir", "kategorie": "Institution", "rollen": ["Forderer:in", "Benefizient:in", "Adressat:in"]}}
+                ]
+            }}
+        - "Über alledem will das rosa-rot-grüne Bündnis aber jene Fraternite, die bei uns mal Solidarität hieß, nicht als nutzlosen 'Sozial-Klimbim' auf dem Globalisierungs-Müll entsorgen. So wird seit Jahresbeginn wegen Wohnungsnot und Spekulation eine Steuer auf leerstehende Wohnungen erhoben. So will Sozialministerin Martine Aubry die kostenlose Gesundheitsversorgung für sozial Schwache einführen. In Frankreich sind die 'kleinen Leute' nicht nur in der Provinz noch deutlich sichtbar. In Deutschland wollen oft gerade jene die 'kleinen Leute' übersehen, die bei der Bundestagswahl der neu aufgelegte Slogan 'Wir sind das Volk' an die Macht in einer Republik beförderte."
+            {{
+                "moralisierung": {{
+                    "moral_werte": [
+                        {{"text": "Fraternite", "moral_foundations_theory_kategorien": ["Fairness", "Loyalität", "Fürsorge"]}},
+                        {{"text": "Solidarität", "moral_foundations_theory_kategorien": ["Fairness", "Loyalität", "Fürsorge"]}},
+                        {{"text": "Wohnungsnot", "moral_foundations_theory_kategorien": ["Schaden"]}},            
+                        {{"text": "Spekulation", "moral_foundations_theory_kategorien": ["Schaden", "Verrat"]}},
+                        {{"text": "Gesundheitsversorgung für sozial Schwache", "moral_foundations_theory_kategorien": ["Fairness", "Fürsorge"]}}
+                    ],
+                    "forderung": "Die Regierung soll die 'kleinen Leute' nicht übersehen (implizit).",
+                    "begruendung": "Die geforderten Maßnahmen werden mit Werten wie Solidarität und sozialer Gerechtigkeit verknüpft, was eine moralische Begründung darstellt.",
+                    "enthaelt_moralisierung": true
+                }},
+                "protagonisten": [
+                    {{"text": "das rosa-rot-grüne Bündnis", "kategorie": "Institution", "rollen": ["Forderer:in"]}},
+                    {{"text": "Sozialministerin Martine Aubry", "kategorie": "Individuum", "rollen": ["Forderer:in"]}},
+                    {{"text": "sozial Schwache", "kategorie": "soziale Gruppe", "rollen": ["Benefizient:in"]}}
+                ]
+            }}
+        - "Der Kranich ist ein Symbol für den Frieden."
+            {{
+                "moralisierung": {{
+                    "moral_werte": [{{"text": "Frieden", "moral_foundations_theory_kategorien": ["Fürsorge"]}}],
+                    "forderung": "",
+                    "begruendung": "Es wird lediglich eine symbolische Tatsache beschrieben und keine Forderung moralisch begründet.",
+                    "enthaelt_moralisierung": false
+                }},
+                "protagonisten": []
+            }}
+        - "SZ: Und wird am Ende moralisch."
+            {{
+                "moralisierung": {{
+                    "moral_werte": [{{"text": "moralisch", "moral_foundations_theory_kategorien": ["Fürsorge", "Fairness"]}}],
+                    "forderung": "",
+                    "begruendung": "Der Test ist zu kurz, um als Moralisierung interpretiert zu werden, obwohl er eine Moralvokabel enthält.",
+                    "enthaelt_moralisierung": false
+                }},
+                "protagonisten": []
+            }}
+        - "Man muss Karl-Theodor zu Guttenberg wohl eine Chance geben, schon der Höflichkeit halber. Vielleicht also, so der fromme Wunsch, wird der 37 Jahre alte Franke ein guter Bundeswirtschaftsminister. Zu erwarten ist das nicht angesichts der Vorarbeiten der eigenen CSU. Halten wir fest: Es sitzt nun einer auf Ludwig Erhards Stuhl, weil er immerhin a) nicht der falschen Partei (CDU oder SPD) angehört und b) nicht aus der falschen Region (Oberbayern) kommt. Ob der Mann ausreichend kompetent ist oder dass es bessere Kandidaten gegeben hätte, spielt keine Rolle – Hauptsache, man hat einen CSUler aus Franken mit telegenem Gesichtsausdruck."
+            {{
+                "moralisierung": {{
+                    "moral_werte": [
+                        {{"text": "Höflichkeit", "moral_foundations_theory_kategorien": ["Fürsorge", "Fairness"]}},
+                        {{"text": "ausreichend kompetent", "moral_foundations_theory_kategorien": ["Autorität"]}}
+                    ],
+                    "forderung": "Man muss Karl-Theodor zu Guttenberg wohl eine Chance geben.",
+                    "begruendung": "Die Forderung, Karl-Theodor zu Guttenberg eine Chance zu geben, wird mit dem moralischen Wert „Höflichkeit“ sowie mit der positiven Darstellung von Guttenberg als "ausreichend kompetent" begründet. Es ist zwar nur ein Teil des Textes, der moralisiert, aber das reicht aus, um den Text als Moralisierung einzustufen.",
+                    "enthaelt_moralisierung": true
+                }},
+                "protagonisten": [
+                    {{"text": "Karl-Theodor zu Guttenberg", "kategorie": "Individuum", "rollen": ["Benefizient:in"]}},
+                    {{"text": "der eigenen CSU", "kategorie": "Institution", "rollen": ["Malefizient:in"]}},
+                    {{"text": "wir", "kategorie": "Menschen", "rollen": ["Forderer:in"]}},
+                    {{"text": "Ludwig Erhards", "kategorie": "Individuum", "rollen": ["NONE"]}},
+                    {{"text": "CDU", "kategorie": "Institution", "rollen": ["NONE"]}},
+                    {{"text": "SPD", "kategorie": "Institution", "rollen": ["NONE"]}}
+                ]
+            }}
+        - "Die Scientology-Organisation wurde auf unterlassene Hilfestellung und Ausübung des Medizinerberufs ohne Bescheinigung angeklagt."
+            {{
+                "moralisierung": {{
+                    "moral_werte": [
+                        {{"text": "unterlassene Hilfestellung", "moral_foundations_theory_kategorien": ["Betrug"]}}],
+                        {{"text": "Ausübung des Medizinerberufs ohne Bescheinigung", "moral_foundations_theory_kategorien": ["Betrug"]}}
+                    "forderung": "",
+                    "begruendung": "Es ist ein berichtender Text über ein Urteil. Was gesagt wird, ist nicht sicher die Meinung des Autors, somit kann hier auch nicht sicher davon ausgegangen werden, dass der Autor moralisiert.",
+                    "enthaelt_moralisierung": false
+                }},
+                "protagonisten": [
+                    {{"text": "die Scientology-Organisation", "kategorie": "Institution", "rollen": ["NONE"]}}
+                ]
+            }}
+        - "Ausgelöst durch die Verfolgungen und die Vertreibung aus Zürich und durch ein starkes missionarisches Sendungsbewusstsein breiteten die Täufer sich schnell in das Alpengebiet (Konrad Grebel, Jakob Hutter), nach Nordwestdeutschland (Melchior Hofmann, Täuferreich von Münster), in die heutigen Niederlande und nach Mähren (Balthasar Hubmaier) aus. Auch in den protestantischen Territorien Südwestdeutschlands, so zum Beispiel in Württemberg und den angrenzenden Herrschaften, ließen sich Erwachsene taufen. Dort verzichtete die Obrigkeit auf allzu grausame Sanktionen."
+            {{
+                "moralisierung": {{
+                    "moral_werte": [
+                        {{"text": "Verfolgungen", "moral_foundations_theory_kategorien": ["Schaden"]}},
+                        {{"text": "Vertreibung", "moral_foundations_theory_kategorien": ["Schaden"]}}
+                    ],
+                    "forderung": "",
+                    "begruendung": "Es handelt sich um eine Beschreibung von historischen Ereignissen, ohne dass moralische Werte zur Begründung einer Forderung angeführt werden.",
+                    "enthaelt_moralisierung": false
+                }},
+                "protagonisten": [
+                    {{"text": "die Täufer", "kategorie": "soziale Gruppe", "rollen": ["NONE"]}},
+                    {{"text": "Konrad Grebel", "kategorie": "Individuum", "rollen": ["NONE"]}},
+                    {{"text": "Jakob Hutter", "kategorie": "Individuum", "rollen": ["NONE"]}},
+                    {{"text": "Melchior Hofmann", "kategorie": "Individuum", "rollen": ["NONE"]}},
+                    {{"text": "Balthasar Hubmaier", "kategorie": "Individuum", "rollen": ["NONE"]}},
+                    {{"text": "Erwachsene", "kategorie": "soziale Gruppe", "rollen": ["NONE"]}},
+                    {{"text": "die Obrigkeit", "kategorie": "Institution", "rollen": ["NONE"]}}
+                ]
+            }}
+        - "Joachim Zöllner (SPD) begrüßte die Entscheidung: „Das Bundesverfassungsgericht hat die Auffassung der Senatsverwaltung für Bildung bestätigt, dass das Fach Ethik mit dem Grundgesetz vereinbar ist.” Der bildungspolitische Sprecher der CDU, Sascha Steuer, wies dagegen darauf hin, dass „der Berliner Sonderweg zu vielen Abmeldungen beim Religionsunterricht geführt hat."
+            {{
+                "moralisierung": {{
+                    "moral_werte": [
+                        {{"text": "mit dem Grundgesetz vereinbar", "moral_foundations_theory_kategorien": ["Loyalität", "Fairness"]}}
+                    ],
+                    "forderung": "Das Fach Ethik sollte (nicht) Teil des Schulunterrichts bleiben.",
+                    "begruendung": "Hier werden zwei gegensätzliche moralische Standpunkte dargestellt. Es handelt sich um eine abwägende Berichterstattung von zwei verschiedenen Perspektiven, daher handelt es sich hier nicht um die diskursive Strategie der Moralisierung.",
+                    "enthaelt_moralisierung": false
+                }},
+                "protagonisten": [
+                    {{"text": "Joachim Zöllner", "kategorie": "Individuum", "rollen": ["NONE"]}},
+                    {{"text": "Das Bundesverfassungsgericht", "kategorie": "Institution", "rollen": ["NONE"]}},
+                    {{"text": "Senatsverwaltung für Bildung ", "kategorie": "Institution", "rollen": ["NONE"]}},
+                    {{"text": "Der bildungspolitische Sprecher der CDU, Sascha Steuer", "kategorie": "Individuum", "rollen": ["NONE"]}}
+                ]
+            }}
+        - "Heute konnten wir viel über die Arbeit unserer Parteifreunde hören. Es wurde viel von Frieden und Sicherheit gesprochen."
+            {{
+                "moralisierung": {{
+                    "moral_werte": [
+                        {{"text": "Frieden", "moral_foundations_theory_kategorien": ["Fürsorge"]}},
+                        {{"text": "Sicherheit", "moral_foundations_theory_kategorien": ["Fürsorge"]}}
+                    ],
+                    "forderung": "",
+                    "begruendung": "Es ist keine Moralisierung, weil hier nur wiedergegeben wird, worüber gesprochen wurde (Themen „Frieden“ und „Sicherheit“), aber keine Forderung formuliert wird, die durch einen dieser moralischen Werte begründet wäre.",
+                    "enthaelt_moralisierung": false
+                }},
+                "protagonisten": [
+                    {{"text": "wir", "kategorie": "Institution", "rollen": ["NONE"]}},
+                    {{"text": "unserer Parteifreunde", "kategorie": "Institution", "rollen": ["NONE"]}}
+                ]
+            }}
+    </beispiele>
+
+    <fragen>
+    i) Leite eine Begründung her, ob gemäß den obigen Kriterien in der <teil_a> eine Moralisierung im folgenden <text> vorliegt oder nicht. 
+    ii) Entscheide daraufhin, ob eine Moralisierung vorliegt oder nicht. Antworte true oder false.
+    iii) - Extrahiere gemäß <teil_b> die Protagonisten.  
+         - Kategorisiere sie nach <teil_c>.  
+         - Weise ihnen Rollen nach <teil_d> zu.  
+    </fragen>
+
+    <output_format>
+    {{
+        "moralisierung": {{
+            "moral_werte": [
+                {{
+                    "text": "string",
+                    "moral_foundations_theory_kategorien": ["Fürsorge", "Schaden", "Fairness", "Betrug", "Loyalität", "Verrat", "Autorität", "Untergrabung von Autorität", "Reinheit", "Verfall", "Freiheit", "Unterdrückung"]
+                }},
+                ...
+            ],
+            "forderung": "string",
+            "begruendung": "string",
+            "enthaelt_moralisierung": "boolean"
+        }},
+        "protagonisten": [
+            {{
+                "text": "string",
+                "kategorie": ("Individuum" | "Menschen" | "Institution" | "Soziale Gruppe" | "OTHER"),
+                "rollen": ["Forderer:in", "Adressat:in", "Benefizient:in", "Malefizient:in", "Bezug unklar", "NONE"]
+            }},
+            ...
+        ]
+    }}
+    </output_format>
+
+    <text>
+    {text}
+    </text>

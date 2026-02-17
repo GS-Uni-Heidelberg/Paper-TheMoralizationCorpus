@@ -1,0 +1,157 @@
+<beispiele>
+    - "Wir sollten die Steuern erhöhen."
+    {
+        "moralisierung": {
+        "moral_werte": [],
+        "forderung": "Wir sollten die Steuern erhöhen.",
+        "begruendung": "Es wird nur eine Handlung empfohlen, ohne dass ein moralischer Wert als Begründung genannt wird.",
+        "enthaelt_moralisierung": false
+        },
+        "protagonisten": [
+        {"text": "Wir", "kategorie": "Institution", "rollen": ["NONE"]}
+        ]
+    }
+    - "Wir sollten die Steuern erhöhen, um die Armut zu bekämpfen und Gerechtigkeit zu schaffen."
+    {
+        "moralisierung": {
+        "moral_werte": [
+            {"text": "Gerechtigkeit", "moral_foundations_theory_kategorien": ["Fairness", "Fürsorge"]},
+            {"text": "die Armut zu bekämpfen", "moral_foundations_theory_kategorien": ["Fairness", "Fürsorge"]}
+        ],
+        "forderung": "Wir sollten Steuern erhöhen.",
+        "begruendung": "Die Forderung, die Steuern zu erhöhen, wird durch die moralischen Werte „Gerechtigkeit“ und „Armut bekämpfen“ unterstützt.",
+        "enthaelt_moralisierung": true
+        },
+        "protagonisten": [
+        {"text": "Wir", "kategorie": "Institution", "rollen": ["Forderer:in", "Benefizient:in", "Adressat:in"]}
+        ]
+    }
+    - "Über alledem will das rosa-rot-grüne Bündnis aber jene Fraternite, die bei uns mal Solidarität hieß, nicht als nutzlosen 'Sozial-Klimbim' auf dem Globalisierungs-Müll entsorgen. So wird seit Jahresbeginn wegen Wohnungsnot und Spekulation eine Steuer auf leerstehende Wohnungen erhoben. So will Sozialministerin Martine Aubry die kostenlose Gesundheitsversorgung für sozial Schwache einführen. In Frankreich sind die 'kleinen Leute' nicht nur in der Provinz noch deutlich sichtbar. In Deutschland wollen oft gerade jene die 'kleinen Leute' übersehen, die bei der Bundestagswahl der neu aufgelegte Slogan 'Wir sind das Volk' an die Macht in einer Republik beförderte."
+    {
+        "moralisierung": {
+        "moral_werte": [
+            {"text": "Fraternite", "moral_foundations_theory_kategorien": ["Fairness", "Loyalität", "Fürsorge"]},
+            {"text": "Solidarität", "moral_foundations_theory_kategorien": ["Fairness", "Loyalität", "Fürsorge"]},
+            {"text": "Wohnungsnot", "moral_foundations_theory_kategorien": ["Schaden"]},            
+            {"text": "Spekulation", "moral_foundations_theory_kategorien": ["Schaden", "Verrat"]},
+            {"text": "Gesundheitsversorgung für sozial Schwache", "moral_foundations_theory_kategorien": ["Fairness", "Fürsorge"]}
+        ],
+        "forderung": "Die Regierung soll die 'kleinen Leute' nicht übersehen (implizit).",
+        "begruendung": "Die geforderten Maßnahmen werden mit Werten wie Solidarität und sozialer Gerechtigkeit verknüpft, was eine moralische Begründung darstellt.",
+        "enthaelt_moralisierung": true
+        },
+        "protagonisten": [
+        {"text": "das rosa-rot-grüne Bündnis", "kategorie": "Institution", "rollen": ["Forderer:in"]},
+        {"text": "Sozialministerin Martine Aubry", "kategorie": "Individuum", "rollen": ["Forderer:in"]},
+        {"text": "sozial Schwache", "kategorie": "soziale Gruppe", "rollen": ["Benefizient:in"]}
+        ]
+    }
+    - "Der Kranich ist ein Symbol für den Frieden."
+    {
+        "moralisierung": {
+        "moral_werte": [{"text": "Frieden", "moral_foundations_theory_kategorien": ["Fürsorge"]}],
+        "forderung": "",
+        "begruendung": "Es wird lediglich eine symbolische Tatsache beschrieben und keine Forderung moralisch begründet.",
+        "enthaelt_moralisierung": false
+        },
+        "protagonisten": []
+    }
+    - "SZ: Und wird am Ende moralisch."
+    {
+        "moralisierung": {
+        "moral_werte": [{"text": "moralisch", "moral_foundations_theory_kategorien": ["Fürsorge", "Fairness"]}],
+        "forderung": "",
+        "begruendung": "Der Test ist zu kurz, um als Moralisierung interpretiert zu werden, obwohl er eine Moralvokabel enthält.",
+        "enthaelt_moralisierung": false
+        },
+        "protagonisten": []
+    }
+    - "Man muss Karl-Theodor zu Guttenberg wohl eine Chance geben, schon der Höflichkeit halber. Vielleicht also, so der fromme Wunsch, wird der 37 Jahre alte Franke ein guter Bundeswirtschaftsminister. Zu erwarten ist das nicht angesichts der Vorarbeiten der eigenen CSU. Halten wir fest: Es sitzt nun einer auf Ludwig Erhards Stuhl, weil er immerhin a) nicht der falschen Partei (CDU oder SPD) angehört und b) nicht aus der falschen Region (Oberbayern) kommt. Ob der Mann ausreichend kompetent ist oder dass es bessere Kandidaten gegeben hätte, spielt keine Rolle – Hauptsache, man hat einen CSUler aus Franken mit telegenem Gesichtsausdruck."
+    {
+        "moralisierung": {
+        "moral_werte": [
+            {"text": "Höflichkeit", "moral_foundations_theory_kategorien": ["Fürsorge", "Fairness"]},
+            {"text": "ausreichend kompetent", "moral_foundations_theory_kategorien": ["Autorität"]}
+        ],
+        "forderung": "Man muss Karl-Theodor zu Guttenberg wohl eine Chance geben.",
+        "begruendung": "Die Forderung, Karl-Theodor zu Guttenberg eine Chance zu geben, wird mit dem moralischen Wert „Höflichkeit“ sowie mit der positiven Darstellung von Guttenberg als "ausreichend kompetent" begründet. Es ist zwar nur ein Teil des Textes, der moralisiert, aber das reicht aus, um den Text als Moralisierung einzustufen.",
+        "enthaelt_moralisierung": true
+        },
+        "protagonisten": [
+        {"text": "Karl-Theodor zu Guttenberg", "kategorie": "Individuum", "rollen": ["Benefizient:in"]},
+        {"text": "der eigenen CSU", "kategorie": "Institution", "rollen": ["Malefizient:in"]},
+        {"text": "wir", "kategorie": "Menschen", "rollen": ["Forderer:in"]},
+        {"text": "Ludwig Erhards", "kategorie": "Individuum", "rollen": ["NONE"]},
+        {"text": "CDU", "kategorie": "Institution", "rollen": ["NONE"]},
+        {"text": "SPD", "kategorie": "Institution", "rollen": ["NONE"]}
+        ]
+    }
+    - "Die Scientology-Organisation wurde auf unterlassene Hilfestellung und Ausübung des Medizinerberufs ohne Bescheinigung angeklagt."
+    {
+        "moralisierung": {
+        "moral_werte": [
+            {"text": "unterlassene Hilfestellung", "moral_foundations_theory_kategorien": ["Betrug"]}],
+            {"text": "Ausübung des Medizinerberufs ohne Bescheinigung", "moral_foundations_theory_kategorien": ["Betrug"]}
+        "forderung": "",
+        "begruendung": "Es ist ein berichtender Text über ein Urteil. Was gesagt wird, ist nicht sicher die Meinung des Autors, somit kann hier auch nicht sicher davon ausgegangen werden, dass der Autor moralisiert.",
+        "enthaelt_moralisierung": false
+        },
+        "protagonisten": [
+        {"text": "die Scientology-Organisation", "kategorie": "Institution", "rollen": ["NONE"]}
+        ]
+    }
+    - "Ausgelöst durch die Verfolgungen und die Vertreibung aus Zürich und durch ein starkes missionarisches Sendungsbewusstsein breiteten die Täufer sich schnell in das Alpengebiet (Konrad Grebel, Jakob Hutter), nach Nordwestdeutschland (Melchior Hofmann, Täuferreich von Münster), in die heutigen Niederlande und nach Mähren (Balthasar Hubmaier) aus. Auch in den protestantischen Territorien Südwestdeutschlands, so zum Beispiel in Württemberg und den angrenzenden Herrschaften, ließen sich Erwachsene taufen. Dort verzichtete die Obrigkeit auf allzu grausame Sanktionen."
+    {
+        "moralisierung": {
+        "moral_werte": [
+            {"text": "Verfolgungen", "moral_foundations_theory_kategorien": ["Schaden"]},
+            {"text": "Vertreibung", "moral_foundations_theory_kategorien": ["Schaden"]}
+        ],
+        "forderung": "",
+        "begruendung": "Es handelt sich um eine Beschreibung von historischen Ereignissen, ohne dass moralische Werte zur Begründung einer Forderung angeführt werden.",
+        "enthaelt_moralisierung": false
+        },
+        "protagonisten": [
+        {"text": "die Täufer", "kategorie": "soziale Gruppe", "rollen": ["NONE"]},
+        {"text": "Konrad Grebel", "kategorie": "Individuum", "rollen": ["NONE"]},
+        {"text": "Jakob Hutter", "kategorie": "Individuum", "rollen": ["NONE"]},
+        {"text": "Melchior Hofmann", "kategorie": "Individuum", "rollen": ["NONE"]},
+        {"text": "Balthasar Hubmaier", "kategorie": "Individuum", "rollen": ["NONE"]},
+        {"text": "Erwachsene", "kategorie": "soziale Gruppe", "rollen": ["NONE"]},
+        {"text": "die Obrigkeit", "kategorie": "Institution", "rollen": ["NONE"]}
+        ]
+    }
+    - "Joachim Zöllner (SPD) begrüßte die Entscheidung: „Das Bundesverfassungsgericht hat die Auffassung der Senatsverwaltung für Bildung bestätigt, dass das Fach Ethik mit dem Grundgesetz vereinbar ist.” Der bildungspolitische Sprecher der CDU, Sascha Steuer, wies dagegen darauf hin, dass „der Berliner Sonderweg zu vielen Abmeldungen beim Religionsunterricht geführt hat."
+    {
+        "moralisierung": {
+        "moral_werte": [
+            {"text": "mit dem Grundgesetz vereinbar", "moral_foundations_theory_kategorien": ["Loyalität", "Fairness"]}
+        ],
+        "forderung": "Das Fach Ethik sollte (nicht) Teil des Schulunterrichts bleiben.",
+        "begruendung": "Hier werden zwei gegensätzliche moralische Standpunkte dargestellt. Es handelt sich um eine abwägende Berichterstattung von zwei verschiedenen Perspektiven, daher handelt es sich hier nicht um die diskursive Strategie der Moralisierung.",
+        "enthaelt_moralisierung": false
+        },
+        "protagonisten": [
+        {"text": "Joachim Zöllner", "kategorie": "Individuum", "rollen": ["NONE"]},
+        {"text": "Das Bundesverfassungsgericht", "kategorie": "Institution", "rollen": ["NONE"]},
+        {"text": "Senatsverwaltung für Bildung ", "kategorie": "Institution", "rollen": ["NONE"]},
+        {"text": "Der bildungspolitische Sprecher der CDU, Sascha Steuer", "kategorie": "Individuum", "rollen": ["NONE"]}
+        ]
+    }
+    - "Heute konnten wir viel über die Arbeit unserer Parteifreunde hören. Es wurde viel von Frieden und Sicherheit gesprochen."
+    {
+        "moralisierung": {
+        "moral_werte": [
+            {"text": "Frieden", "moral_foundations_theory_kategorien": ["Fürsorge"]},
+            {"text": "Sicherheit", "moral_foundations_theory_kategorien": ["Fürsorge"]}
+        ],
+        "forderung": "",
+        "begruendung": "Es ist keine Moralisierung, weil hier nur wiedergegeben wird, worüber gesprochen wurde (Themen „Frieden“ und „Sicherheit“), aber keine Forderung formuliert wird, die durch einen dieser moralischen Werte begründet wäre.",
+        "enthaelt_moralisierung": false
+        },
+        "protagonisten": [
+        {"text": "wir", "kategorie": "Institution", "rollen": ["NONE"]},
+        {"text": "unserer Parteifreunde", "kategorie": "Institution", "rollen": ["NONE"]}
+        ]
+    }
+</beispiele>

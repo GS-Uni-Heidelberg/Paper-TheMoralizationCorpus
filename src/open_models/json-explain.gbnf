@@ -1,0 +1,57 @@
+root ::= ("```json")? ws? "{" "\n" ws "\"moralisierung\"" ":" moralisierung "," "\n" ws "\"protagonisten\"" ":" ws protagonisten "\n" ws? "}" ws? ("```")? ws?
+
+moralisierung ::= "{" "\n" ws "\"moral_werte\"" ":" ws moral-werte "," "\n" ws "\"forderung\"" ":" ws string "," "\n" ws "\"begruendung\"" ":" ws string "," "\n" ws "\"enthaelt_moralisierung\"" ":" ws boolean "\n" ws "}"
+
+moral-werte ::= "[" ws? ( moral-wert ("," ws moral-wert)* ws? )? "]"
+
+moral-wert ::= "{" "\n" ws "\"text\"" ":" ws string "," "\n"  ws "\"moral_foundations_theory_kategorien\"" ":" ws mft-kategorien "\n" ws? "}"
+
+mft-kategorien ::= "[" ws? ( mft-kategorie ("," ws mft-kategorie)* ws? )? "]" 
+
+mft-kategorie ::= "\"" ("Fürsorge" | "Schaden" | "Fairness" | "Betrug" | "Loyalität" | "Verrat" | "Autorität" | "Untergrabung von Autorität" | "Reinheit" | "Verfall" | "Freiheit" | "Unterdrückung") "\""
+
+protagonisten ::= "[" ws? ( protagonist ("," ws protagonist)* ws? )? "]"
+
+protagonist ::= "{" "\n" ws "\"text\"" ":" ws string "," "\n" ws "\"kategorie\"" ":" ws kategorie "," "\n" ws "\"rollen\"" ":" ws rollen "\n" ws? "}"
+
+kategorie ::= "\"" ( "Individuum" | "Menschen" | "Institution" | "Soziale Gruppe" | "OTHER" ) "\""
+
+rollen ::= "[" ws? ( rolle ("," ws rolle)* ws? )? "]" 
+
+rolle ::= "\"" ( "Forderer:in" | "Adressat:in" | "Benefizient:in" | "Malefizient:in" | "Bezug unklar" | "NONE" ) "\""
+
+boolean ::= "true" | "false"
+
+string ::=
+  "\"" (
+    [^{}"\\\[\]\x60\x7F\x00-\x1F] | # exclude json-brackets, backslash, backtick, control (non-printable) chars
+    # "\\" (["\\bfnrt] | "u" [0-9a-fA-F]{4}) # escapes
+    unicode
+  )* "\"" ws
+
+unicode ::= (
+    "\\" (["\\bfnrt] | "u" (
+        [14-9a-fA-F][0-9a-fA-F]{3} |
+        "0"[013-9a-fA-F][0-9a-fA-F]{2} | "02"[0-9ac-fAC-F][0-9a-fA-F] | "02B"[0-9b-fB-F] |
+        "2"[1-9a-fA-F][0-9a-fA-F]{2} | "20"[024-9a-fA-F][0-9a-fA-F] | "201"[0-9abefABEF] | "203"[0124-9a-fA-F] |
+        "3"[1-9a-fA-F][0-9a-fA-F]{2} | "30"[2-9a-fA-F][0-9a-fA-F] | "300"[0124-9a-fA-F] | "301"[0-9a-dfA-DF]
+    ))
+)
+    
+# potentially harmful for json.loads():
+# \u02BA modifier letter double prime
+# \u201C left double quotation mark
+# \u201D right double quotation mark
+# \u2033 double prime
+# \u3003 ditto mark
+# \u301E double prime quotation mark
+
+# escape symbols (do we want to allow them?)
+# \b backspace
+# \f form feed
+# \n new line
+# \r carriage return
+# \t tab
+
+# Optional space: by convention, applied in this grammar after literal chars when allowed
+ws ::= ([ \t\n] ws)?
