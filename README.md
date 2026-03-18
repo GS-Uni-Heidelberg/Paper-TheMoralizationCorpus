@@ -12,7 +12,9 @@ Moralizations – arguments that invoke moral values to justify demands or posit
 - Annotated Dataset: [http://corpora.ids-mannheim.de/repo/moralization-corpus/](http://corpora.ids-mannheim.de/repo/moralization-corpus/)
 - Predictions from LLMs: [data/predictions.json](data/predictions.json)
 - IAA Study [data/iaa-study_test-150.tsv](data/iaa-study_test-150.tsv)
-- Dictionary of Moral-Indicating Words: [DiMi] (https://github.com/maria-becker/Moralization/tree/main/DiMi%20--%20Dictionary%20of%20Moral-Indicating%20Words) 
+- Dictionary of Moral-Indicating Words: [DiMi]([data/iaa-study_test-150.tsv](https://github.com/maria-becker/Moralization/tree/main/DiMi%20--%20Dictionary%20of%20Moral-Indicating%20Words))
+-
+- () 
 
 
 ## Citation
