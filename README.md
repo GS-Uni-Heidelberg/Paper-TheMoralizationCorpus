@@ -16,6 +16,12 @@ Proceedings of **LREC 2026**
 
 ---
 
+## 🎥 Demo Video 
+
+👉 https://www.youtube.com/watch?v=xJWpJA6rOgc
+
+---
+
 ## 📬 Contact
 
 Please feel free to contact us via e-mail with any questions, comments, or feedback:  
