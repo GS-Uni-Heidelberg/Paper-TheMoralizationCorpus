@@ -16,7 +16,7 @@ Proceedings of **LREC 2026**
 
 ---
 
-## 🎥 Demo Video 
+## 🎥 Video 
 
 👉 https://www.youtube.com/watch?v=xJWpJA6rOgc
 
