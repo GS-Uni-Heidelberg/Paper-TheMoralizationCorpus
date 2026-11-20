@@ -12,7 +12,7 @@
 **The Moralization Corpus: Frame-Based Annotation and Analysis of Moralizing Speech Acts across Diverse Text Genres**  
 Proceedings of **LREC 2026**
 
-👉 https://arxiv.org/abs/2512.15248  
+👉 https://aclanthology.org/2026.lrec-1.563
 
 ---
 
