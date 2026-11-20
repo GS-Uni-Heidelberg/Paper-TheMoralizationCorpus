@@ -2,7 +2,7 @@
 
 **Maria Becker, Mirko Sommer, Lars Tapken, Yi Wan Teh, Bruno Brocai**  
 
-[![Paper](https://img.shields.io/badge/Paper-LREC%202026-blue)](https://arxiv.org/abs/2512.15248)  
+[![Paper](https://img.shields.io/badge/Paper-LREC%202026-blue)](https://aclanthology.org/2026.lrec-1.563)  
 [![Dataset](https://img.shields.io/badge/Type-Multi--genre%20Corpus-orange)]()  
 
 ---
